@@ -21,8 +21,17 @@ namespace Vlc.DotNet.Core.Interops
                 result[index] = (MediaTrackInfosStructure)Marshal.PtrToStructure(buffer, typeof(MediaTrackInfosStructure));
 #if X86
                 buffer = new IntPtr(buffer.ToInt32() + Marshal.SizeOf(typeof(MediaTrackInfosStructure)));
-#else
+#elif X64
                 buffer = new IntPtr(buffer.ToInt64() + Marshal.SizeOf(typeof(MediaTrackInfosStructure)));
+#else
+                if (Vlc.DotNet.Core.Interops.Signatures.X86_X64_PtrToStructure.IsX86)
+                {
+                    buffer = new IntPtr(buffer.ToInt32() + Marshal.SizeOf(typeof(MediaTrackInfosStructure)));
+                }
+                else
+                {
+                    buffer = new IntPtr(buffer.ToInt64() + Marshal.SizeOf(typeof(MediaTrackInfosStructure)));
+                }
 #endif
             }
             Free(fullBuffer);

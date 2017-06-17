@@ -12,7 +12,11 @@ namespace Vlc.DotNet.Core
 
         private void OnMediaSubItemTreeAddedInternal(IntPtr ptr)
         {
-            var args = (VlcEventArg) Marshal.PtrToStructure(ptr, typeof (VlcEventArg));
+#if X86 || X64
+            var args = (VlcEventArg)Marshal.PtrToStructure(ptr, typeof(VlcEventArg));
+#else
+            var args = (VlcEventArg)X86_X64_PtrToStructure.PtrToStructure(ptr);
+#endif
             OnMediaSubItemTreeAdded(new VlcMedia(myVlcMediaPlayer, VlcMediaInstance.New(myVlcMediaPlayer.Manager, args.MediaSubItemTreeAdded.MediaInstance)));
         }
 

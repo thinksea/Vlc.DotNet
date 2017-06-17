@@ -59,6 +59,19 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>..\..\build\Vlc.DotNet.Wpf\Release - x86 - .Net 4.0\Vlc.DotNet.Wpf.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\build\Vlc.DotNet.Wpf\Debug - x64 - x86 - .Net 4.0\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CLR4;NET45</DefineConstants>
+    <DocumentationFile>..\..\build\Vlc.DotNet.Wpf\Debug - x64 - x86 - .Net 4.0\Vlc.DotNet.Wpf.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\build\Vlc.DotNet.Wpf\Release - x64 - x86 - .Net 4.0\</OutputPath>
+    <DefineConstants>TRACE;CLR4;NET45</DefineConstants>
+    <Optimize>true</Optimize>
+    <DocumentationFile>..\..\build\Vlc.DotNet.Wpf\Release - x64 - x86 - .Net 4.0\Vlc.DotNet.Wpf.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

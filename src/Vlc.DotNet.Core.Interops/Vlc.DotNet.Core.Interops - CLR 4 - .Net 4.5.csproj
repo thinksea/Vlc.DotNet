@@ -59,6 +59,21 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>..\..\build\Vlc.DotNet.Core.Interops\Release - x86 - .Net 4.5\Vlc.DotNet.Core.Interops.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\build\Vlc.DotNet.Core.Interops\Debug - x64 - x86 - .Net 4.5\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CLR4;NET45</DefineConstants>
+    <DocumentationFile>..\..\build\Vlc.DotNet.Core.Interops\Debug - x64 - x86 - .Net 4.5\Vlc.DotNet.Core.Interops.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\build\Vlc.DotNet.Core.Interops\Release - x64 - x86 - .Net 4.5\</OutputPath>
+    <DefineConstants>TRACE;CLR4;NET45</DefineConstants>
+    <Optimize>true</Optimize>
+    <DocumentationFile>..\..\build\Vlc.DotNet.Core.Interops\Release - x64 - x86 - .Net 4.5\Vlc.DotNet.Core.Interops.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>

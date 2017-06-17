@@ -59,6 +59,19 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>..\..\build\Vlc.DotNet.Core.Interops\Release - x86 - .Net 4.0\Vlc.DotNet.Core.Interops.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\build\Vlc.DotNet.Core.Interops\Debug - x64 - x86 - .Net 4.0\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CLR4;NET40</DefineConstants>
+    <DocumentationFile>..\..\build\Vlc.DotNet.Core.Interops\Debug - x64 - x86 - .Net 4.0\Vlc.DotNet.Core.Interops.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\build\Vlc.DotNet.Core.Interops\Release - x64 - x86 - .Net 4.0\</OutputPath>
+    <DefineConstants>TRACE;CLR4;NET40</DefineConstants>
+    <DocumentationFile>..\..\build\Vlc.DotNet.Core.Interops\Release - x64 - x86 - .Net 4.0\Vlc.DotNet.Core.Interops.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>

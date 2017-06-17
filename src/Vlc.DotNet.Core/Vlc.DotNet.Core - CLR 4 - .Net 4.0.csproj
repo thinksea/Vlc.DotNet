@@ -28,6 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>..\..\build\Vlc.DotNet.Core\Debug - x64 - .Net 4.0\Vlc.DotNet.Core.XML</DocumentationFile>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>..\..\build\Vlc.DotNet.Core\Release - x64 - .Net 4.0\</OutputPath>
@@ -58,6 +59,19 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>..\..\build\Vlc.DotNet.Core\Release - x86 - .Net 4.0\Vlc.DotNet.Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\build\Vlc.DotNet.Core\Debug - x64 - x86 - .Net 4.0\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CLR4;NET40</DefineConstants>
+    <DocumentationFile>..\..\build\Vlc.DotNet.Core\Debug - x64 - x86 - .Net 4.0\Vlc.DotNet.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\build\Vlc.DotNet.Core\Release - x64 - x86 - .Net 4.0\</OutputPath>
+    <DefineConstants>TRACE;CLR4;NET40</DefineConstants>
+    <Optimize>true</Optimize>
+    <DocumentationFile>..\..\build\Vlc.DotNet.Core\Release - x64 - x86 - .Net 4.0\Vlc.DotNet.Core.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
